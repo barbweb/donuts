@@ -18,21 +18,42 @@ body {
     position: relative;
     margin-bottom: 15px;
     margin-top: 15px;
+    height: 510px;
 }
 .banner img {
     width: 100%;
     display: block;
     border: 1.2px solid rgb(250, 250, 250);
 }
+.firstbanner,
+.secondbanner {
+    position: absolute;
+    inset: 0;
+     animation-timing-function: ease-in-out;
+}
+.firstbanner {
+    animation: fade1 10s infinite;
+}
+.secondbanner {
+    animation: fade2 10s infinite;
+}
+@keyframes fade1 {
+    0%, 45%   { opacity: 1; }
+    55%, 95%  { opacity: 0; }
+    100%      { opacity: 1; }
+}
+@keyframes fade2 {
+    0%, 45%   { opacity: 0; }
+    55%, 95%  { opacity: 1; }
+    100%      { opacity: 0; }
+}
 .banner h1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    font-size: 6rem;
+    font-size: clamp(2.5rem, 8vw, 6rem);
     font-family: 'Molle', cursive;
-
     background: linear-gradient(
         270deg,
         #ff98b6,
@@ -40,17 +61,12 @@ body {
         #ffa87f,
         rgb(239, 157, 255)
     );
-
     background-size: 600% 600%;
-
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     animation: gradientMove 10s ease infinite;
-
     text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.35);
 }
-
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -194,4 +210,30 @@ a {
     color: rgb(110, 110, 110);
     font-family: "Inter", sans-serif;
     font-size: 0.8rem;
+}
+/* mobile design */
+@media (max-width: 600px) {
+    .banner {
+        height: 193px;
+    }
+    .banner h1 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        text-align: center;
+        width: 90%;          
+    }
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content h2 {
+        font-size: 1.5rem;
+    }
+    .content p {
+        font-size: 1.1rem;
+    }
+    .gallery-item {
+        width: 45%;
+    }
+    .promo p {
+        font-size: 0.9rem;
+    }
 }
