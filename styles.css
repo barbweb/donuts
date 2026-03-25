@@ -10,7 +10,7 @@ body {
 }
 .links {
     text-align: center;
-    padding: 8px 0;
+    padding: 8px 0 5px 0;
     background-color: rgb(255, 172, 195);
     margin-top: 0px;
 }
