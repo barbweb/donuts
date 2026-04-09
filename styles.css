@@ -9,9 +9,11 @@ body {
 }
 .links {
     text-align: center;
-    padding: 8px 0 5px 0;
+    padding: 5px 0 5px 0;
     background-color: rgb(255, 172, 195);
-    margin-top: 0px;
+    margin: auto;
+    max-width: 900px;
+    border: 1.2px solid rgb(250, 250, 250);
 }
 .banner {
     position: relative;
@@ -200,7 +202,7 @@ a {
 }
 .footer {
     text-align: center;
-    padding: 2px 0;
+    padding: 1px 0;
     background-color: rgb(255, 172, 195);
     color: rgb(110, 110, 110);
     font-family: "Inter", sans-serif;
